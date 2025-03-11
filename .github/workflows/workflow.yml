@@ -36,8 +36,8 @@ jobs:
       - name: Upload coverage report
         uses: actions/upload-artifact@v4
         with:
-          name: backend-coverage
-          path: back/target/site/jacoco/
+          name: backend-target
+          path: back/target/
 
 
   frontend-tests:
@@ -82,7 +82,7 @@ jobs:
       - name: Download Backend Coverage Report
         uses: actions/download-artifact@v4
         with:
-          name: backend-coverage
+          name: backend-target
           path: back/target/site/jacoco/
 
       - name: Download Frontend Coverage Report
